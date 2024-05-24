@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class People {
     private String name = null;
     private Integer age = 0;
@@ -69,6 +71,18 @@ public class People {
         this.genre = genre;
         this.weigth = weigth;
         this.heigth = heigth;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof People people)) return false;
+        return Objects.equals(getName(), people.getName()) && Objects.equals(getAge(), people.getAge()) && Objects.equals(getDni(), people.getDni()) && Objects.equals(getGenre(), people.getGenre()) && Objects.equals(getWeigth(), people.getWeigth()) && Objects.equals(getHeigth(), people.getHeigth());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getAge(), getDni(), getGenre(), getWeigth(), getHeigth());
     }
 }
 

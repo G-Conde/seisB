@@ -2,6 +2,12 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+
+        People persona = new People();
+        People persona1 = new People();
+        Boolean valor= persona1.equals(persona1);
+        System.out.println("es "+ persona1.hashCode());
+        System.out.println("es "+ persona.hashCode());
         Scanner scanner = new Scanner(System.in);
 
         //programa que solicite al usuario que ingrese una cadena de texto y luego cuenta
@@ -65,6 +71,8 @@ public class Main {
                                            no tienen un orden.
                                            basado en una tabla, permite inserccion, eliminar y busqueda rapida
                                            permite elementos nulos  */
+
+
 
     }
 }
